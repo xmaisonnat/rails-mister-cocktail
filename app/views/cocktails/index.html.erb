@@ -1,0 +1,15 @@
+
+  <div>
+    <%= render './shared/banner'  %>
+  </div>
+
+  <br>
+<div class="container">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.destinationcocktails.fr/wp-content/uploads/recipes/121_gkdaikiri.jpg)">
+        <%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-ghost" %>
+      </div>
+    <% end %>
+  </div>
+</div>
