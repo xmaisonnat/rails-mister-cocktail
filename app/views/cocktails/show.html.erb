@@ -1,4 +1,19 @@
-<h1>Show</h1>
+<br>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://vignette.wikia.nocookie.net/cocktails/images/0/0e/Community-header-background/revision/latest?cb=20170726164220)">
+  <%= @cocktail.name %>
+</div>
 
-<%= @cocktail.name %>
-<%= link_to 'Back to the cocktail list', cocktails_path %>
+<br>
+
+<div class="container">
+  <div class="card-product">
+  <div class="card-product-infos">
+    <h2><%= @cocktail.name %></h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+
+
+<br>
+<%= link_to 'Back to the cocktail list', cocktails_path , class: "btn btn-warning"%>
+</div>
