@@ -1,6 +1,20 @@
-<h1>New</h1>
+<br>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://vignette.wikia.nocookie.net/cocktails/images/0/0e/Community-header-background/revision/latest?cb=20170726164220)">
+  <%= @cocktail.name %>
+</div>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<br>
+
+<div class="container">
+  <div class="card-product">
+  <div class="card-product-infos">
+    <div class="container text-align-center">
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
