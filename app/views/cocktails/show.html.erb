@@ -10,10 +10,15 @@
   <div class="card-product-infos">
     <h2><%= @cocktail.name %></h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
+
+    <% @cocktail.doses.each do |dose| %>
+      <h1>hello</h1>
+      <%= dose.description %>
+    <% end %>
   </div>
 </div>
 
-
 <br>
 <%= link_to 'Back to the cocktail list', cocktails_path , class: "btn btn-warning"%>
+<%= link_to 'Add cocktail doses',  new_cocktail_dose_path(@cocktail) , class: "btn btn-primary"%>
 </div>
