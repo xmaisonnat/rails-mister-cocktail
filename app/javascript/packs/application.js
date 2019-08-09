@@ -17,6 +17,8 @@
 
 console.log('Hello World from Webpacker')
 // config/webpack/environment.js
+import 'bootstrap';
+
 const { environment } = require('@rails/webpacker')
 
 // Bootstrap 4 has a dependency over jQuery & Popper.js:
@@ -30,4 +32,3 @@ environment.plugins.prepend('Provide',
 )
 
 module.exports = environment
-import 'bootstrap';
