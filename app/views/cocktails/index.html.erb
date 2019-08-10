@@ -7,8 +7,12 @@
 <div class="container">
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.destinationcocktails.fr/wp-content/uploads/recipes/121_gkdaikiri.jpg)">
+
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-ghost" %>
+
+
       </div>
     <% end %>
   </div>
